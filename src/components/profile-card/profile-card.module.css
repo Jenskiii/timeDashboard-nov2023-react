@@ -1,6 +1,7 @@
 .container{
     position: relative;
 }
+
 .profile{
     position: relative;
     background-color: hsl(var(--clr-primary-purple));
@@ -37,13 +38,13 @@
     margin-bottom: .25rem
 }
 
+/* footer */
 .profile-footer{
     display: grid;
     grid-auto-flow: column;
     background-color: hsl(var(--clr-neutral-700));
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     width: 100%;
-   
 }
 
 .profile-footer button{

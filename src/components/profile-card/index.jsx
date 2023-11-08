@@ -1,6 +1,11 @@
+import { useState } from "react";
 import ProfileImg from "../../assets/image-jeremy.png";
 import styles from "./profile-card.module.css";
-export function ProfileCard({changeTimeframe}) {
+
+
+export function ProfileCard({ changeTimeframe }) {
+  const [selectValue, setSelectValue] = useState("weekly");
+
   return (
     <>
       <div className={styles.container}>
@@ -14,9 +19,36 @@ export function ProfileCard({changeTimeframe}) {
           </div>
         </div>
         <div className={styles["profile-footer"]}>
-          <button id="daily" onClick={e => changeTimeframe(e.target.id)} className="button">Daily</button>
-          <button id="weekly" onClick={e => changeTimeframe(e.target.id)} className="button">Weekly</button>
-          <button id="monthly" onClick={e => changeTimeframe(e.target.id)} className="button">Montly</button>
+          <button
+            id="daily"
+            onClick={(e) => {
+              changeTimeframe(e.target.id);
+              setSelectValue(e.target.id)
+            }}
+            className={`button ${selectValue === "daily" ? "active" : ""}`}
+          >
+            Daily
+          </button>
+          <button
+            id="weekly"
+            onClick={(e) => {
+              changeTimeframe(e.target.id);
+              setSelectValue(e.target.id)
+            }}
+            className={`button ${selectValue === "weekly" ? "active" : ""}`}
+          >
+            Weekly
+          </button>
+          <button
+            id="monthly"
+            onClick={(e) => {
+              changeTimeframe(e.target.id);
+              setSelectValue(e.target.id)
+            }}
+            className={`button ${selectValue === "monthly" ? "active" : ""}`}
+          >
+            Montly
+          </button>
         </div>
       </div>
     </>

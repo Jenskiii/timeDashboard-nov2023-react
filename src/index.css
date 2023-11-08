@@ -78,6 +78,10 @@ body {
   transition: 250ms ease-in-out;
 }
 
+.button.active{
+  color: hsl(var(--clr-primary-white));
+}
+
 .button:is(:hover,:active){
   color: hsl(var(--clr-primary-white));
 }
