@@ -1,0 +1,90 @@
+/*// ROOT //*/
+:root {
+  /* colors */
+  --clr-primary-white: 0 100% 100%;
+  --clr-primary-purple: 246 80% 60%;
+/* neutral */
+  --clr-neutral-100: 236 100% 87%;
+  --clr-neutral-200: 235 45% 61%;
+  --clr-neutral-600: 236 41% 34%;
+  --clr-neutral-700: 235 46% 20%;
+  --clr-neutral-800: 226 43% 10%;
+
+  /* cards */
+  --clr-card-work: 15 100% 70%;
+  --clr-card-play: 195 74% 62%;
+  --clr-card-study: 348 100% 68%;
+  --clr-card-exercise: 145 58% 55%;
+  --clr-card-social: 264 64% 52%;
+  --clr-card-self-care: 43 84% 65%;
+
+  /* typography */
+  --ff-sans: 'Rubik', sans-serif;
+
+  --fs-900: clamp(2rem, 4vw + 0.25rem, 3.5rem);
+  --fs-800: clamp(1.5rem, 4vw - 0.25rem, 2.5rem);
+  --fs-500: 1.125rem;
+  --fs-400: 0.9375rem;;
+
+  /* font-weight */
+  --fw-light: 300;
+  --fw-default: 400;
+  --fw-medium: 500;
+
+  --border-radius: 0.9375rem;
+}
+
+/*// RESET //*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+a{
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*// GENERAL //*/
+body {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-default);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-neutral-100));
+  background-color: hsl(var(--clr-neutral-800));
+  line-height: normal;
+}
+
+/* COMPONENTS */
+.button{
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(var(--clr-neutral-100));
+  font-size: var(--fs-500);
+  border: none;
+  transition: 250ms ease-in-out;
+}
+
+.button:is(:hover,:active){
+  color: hsl(var(--clr-primary-white));
+}
+
+/* UTILITIES */
+.container{
+  width: 90%;
+  max-width: 69.375rem;
+  margin-inline: auto;
+}

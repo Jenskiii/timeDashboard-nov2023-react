@@ -1,0 +1,23 @@
+.grid{
+    display: grid;
+    gap: 1.5rem;
+    place-content: center;
+    height: 100vh;
+}
+
+
+
+@media (min-width: 65em){
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr,1fr;
+        grid-template-areas: 
+        "profile card card card"
+        "profile card card card"
+        ;
+    }
+
+    .profile{
+        grid-area: profile;
+    }
+}
