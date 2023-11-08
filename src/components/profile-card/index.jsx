@@ -47,7 +47,7 @@ export function ProfileCard({ changeTimeframe }) {
             }}
             className={`button ${selectValue === "monthly" ? "active" : ""}`}
           >
-            Montly
+            monthly
           </button>
         </div>
       </div>
